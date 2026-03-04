@@ -94,3 +94,9 @@ For a fully functional live application, follow these steps:
 - **Modularity**: Components are broken down for reusability.
 - **Clean UI**: Used a curated color palette (Primary Blue) and consistent spacing.
 - **Robustness**: Server-side validations for email and employee IDs.
+
+## Assumptions & Limitations
+- **Backend Startup**: On Render's free tier, the backend may take 60-90 seconds to "spin up" after being idle. The UI handles this with a loading spinner.
+- **Data Persistence**: The application assumes a PostgreSQL database is available. If using the local setup, ensure the database is created before running the server.
+- **Single Admin**: The current version assumes a single administrator context and does not include complex Role-Based Access Control (RBAC).
+- **Date Filtering**: Dashboard stats for specific dates assume attendance records have been marked for those dates; otherwise, counts will be zero.
